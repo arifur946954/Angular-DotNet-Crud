@@ -1,0 +1,47 @@
+
+<form class="container  col-sm-6"
+ #form="ngForm" (ngSubmit)="updateEmployee()">
+    <div class="container my-5" >
+        <h1 class="mb-3">Add New Employee</h1>
+    </div>
+
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">ID</label>
+        <input type="number"
+        name="id" [(ngModel)]="employeeDetails.id"
+         class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+       </div>
+    
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Mobile Number</label>
+      <input type="number"
+      name="name" [(ngModel)]="employeeDetails.mobileNumber"
+       class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+     </div>
+
+     <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Name</label>
+        <input type="text"
+        name="name" [(ngModel)]="employeeDetails.name"
+        class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+       </div>
+
+     <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Email</label>
+        <input type="email"
+        name="name" [(ngModel)]="employeeDetails.email"
+        class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+       </div>
+
+       
+
+       <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Password</label>
+        <input type="password"
+        name="name" [(ngModel)]="employeeDetails.password"
+        class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+       </div>
+    
+    
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>

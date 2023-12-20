@@ -13,7 +13,19 @@ export class EmployeesService {
 
   constructor(private http:HttpClient) { }
   getAllEmployee():Observable<Employee[]>{
-    return this.http.get<Employee[]>(this.baseApiUrl+'api/Employee');
+    return this.http.get<Employee[]>(this.baseApiUrl+'/api/Employee');
 
+  }
+
+  addEmployee(addEmployeeRequest:Employee):Observable<Employee>{
+    return this.http.post<Employee>(this.baseApiUrl + '/api/employee',addEmployeeRequest);
+  }
+
+  getEmployee(id:number):Observable<Employee>{
+    return this.http.get<Employee> (this.baseApiUrl + '/api/employee/'+id);
+  }
+
+  updateEmployee(id:number,updateEmployeeRequest:Employee):Observable<Employee>{
+return this.http.put<Employee>(this.baseApiUrl + '/api/employee/'+id,updateEmployeeRequest)
   }
 }
